@@ -15,7 +15,7 @@ export class CreateMessageDto {
   fullname: string
   
   @IsString()
-  sevice: string
+  service: string
 
   @IsEmail()
   mail: string
