@@ -22,12 +22,14 @@ export class MailService {
       from: "amrepair81@gmail.com", // Sender email address
       to:"sardorbekmusilman@gmail.com", 
       subject:"Client sent message for service",
-      text :"Email text",
+      text :"Please answer the following questions",
       html,
     };
 
     return new Promise((resolve, reject) => {
       this.transporter.sendMail(mailOptions, (error, info) => {
+        console.log(error); 
+        console.log(info); 
         if (error) {
           reject(error);
         } else {
