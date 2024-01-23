@@ -28,7 +28,7 @@ export class MessagesService {
    >
      <center>
        <div style="display: none; max-height: 0px; overflow: hidden">
-         Connect with Miro users to share, learn, and get inspired.
+         A client send message to use service
        </div>
        <table
          border="0"
@@ -167,6 +167,7 @@ export class MessagesService {
                                  ${createMessageDto?.fullname} .
                                  <p>Service:${ createMessageDto?.service}</p>
                                  <p>Zipcode:${ createMessageDto?.zipcode}</p>
+                                 <p>${createMessageDto?.message}</p>
                                </p>
                              </td>
                            </tr>
@@ -229,6 +230,7 @@ export class MessagesService {
                                          href="mailto:${createMessageDto?.mail}"
                                          class="m_5227529925901652650button__primary_font-size"
                                          style="
+                                         margin-bottom: 30px ; 
                                            display: inline-block;
                                            font-size: 16px;
                                            line-height: 24px;
