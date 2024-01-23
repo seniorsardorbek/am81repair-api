@@ -7,7 +7,7 @@ export class MailService {
 
   constructor() {
     this.transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
+      host: 'http://minimatch.uz:5000/,
       port: 587,
       secure: false,
       auth: {
