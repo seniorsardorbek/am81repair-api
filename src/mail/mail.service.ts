@@ -10,8 +10,8 @@ export class MailService {
       port: 587, 
       secure: false, 
       auth: {
-        user: "minimatchuz@gmail.com", 
-        pass: "pdtd lnsk clvy hyrv",
+        user: "amrepair81@gmail.com", 
+        pass: "arfm bvwk kpdc msfc",
       },
     });
   }
@@ -19,7 +19,7 @@ export class MailService {
 
   async sendEmail(html :string) {
     const mailOptions = {
-      from: "minimatchuz@gmail.com", // Sender email address
+      from: "amrepair81@gmail.com", // Sender email address
       to:"sardorbekmusilman@gmail.com", 
       subject:"Client sent message for service",
       text :"Email text",
