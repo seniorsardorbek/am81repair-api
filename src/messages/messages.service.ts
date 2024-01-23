@@ -10,8 +10,10 @@ export class MessagesService {
     @InjectModel(Message.name) private messageModule: Model<Message>,
     private readonly mailModule: MailService,
   ) {}
-  create (createMessageDto: CreateMessageDto) {
-    this.mailModule.sendEmail(this.getHtml(createMessageDto))
+ async create (createMessageDto: CreateMessageDto) {
+   const res = await  this.mailModule.sendEmail(this.getHtml(createMessageDto))
+  console.log(res);
+  
     return this.messageModule.create(createMessageDto)
   }
 
