@@ -7,7 +7,7 @@ export class MailService {
 
   constructor() {
     this.transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
+      host: ' ',
       port: 465,
       secure: true,
       auth: {
@@ -32,10 +32,13 @@ export class MailService {
     };
 
     try {
+      console.log('Working');
       const info = await this.transporter.sendMail(mailOptions);
       console.log(info);
       return info;
     } catch (error) {
+
+      console.log('errror');
       console.error(error);
       throw error;
     }
