@@ -4,13 +4,11 @@ import * as nodemailer from "nodemailer";
 @Injectable()
 export class MailService {
   private transporter;
-
   constructor() {
     this.transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
       port: 587,
       secure: false,
-      tls: true,
       auth: {
         type: "OAuth2",
         user: "amrepair81@gmail.com",
@@ -25,8 +23,8 @@ export class MailService {
 
   async sendEmail(html: string): Promise<any> {
     const mailOptions = {
-      from: "amrepair81@gmail.com", // Sender email address
-      to: "sardorbekmusilman@gmail.com",
+      from: "amrepair81@gmail.com",
+      to: "markov81@gmail.com",
       subject: "Client sent message for service",
       text: "Please answer the following questions",
       html,
