@@ -5,7 +5,7 @@ import { MessagesModule } from './messages/messages.module';
 import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-  imports: [MessagesModule , MongooseModule.forRoot(`mongodb://127.0.0.1:27017/amrepair`),],
+  imports: [MessagesModule , MongooseModule.forRoot(`mongodb+srv://sardorbekmusilman:P1w9vzeoWMzsFDqL@cluster0.9lsqa.mongodb.net/am81repair`),],
   controllers: [AppController],
   providers: [AppService],
 })
